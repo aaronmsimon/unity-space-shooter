@@ -14,10 +14,8 @@ public class PlayerController : MonoBehaviour
     private Transform rightTurret;
 
     private float moveInput;
-    private float lastMoveInput;
-    private float rotation;
     private float rotSnapbackSpeed = 200f;
-    private float maxShipRotation = 45;
+    private float maxShipRotation = -45;
     private float leftTurretRot;
     private float rightTurretRot;
 
@@ -49,26 +47,12 @@ public class PlayerController : MonoBehaviour
         transform.Translate(new Vector3(moveInput * moveSpeed * Time.deltaTime, 0, 0), Space.World);
 
         Quaternion targetRot;
-        float rotSpeed;
-        if (Sign(lastMoveInput) != Sign(moveInput)) {
-            transform.rotation = Quaternion.identity;
+        if (moveInput != 0) {
+            targetRot = Quaternion.Euler(0, 0, moveInput * maxShipRotation);
         } else {
-            if (moveInput != 0) {
-                rotation += moveInput * -1;
-                rotation = Mathf.Clamp(rotation, Mathf.Min(0, maxShipRotation * Mathf.Sign(rotation)), Mathf.Max(0, maxShipRotation * Mathf.Sign(rotation)));
-                targetRot = Quaternion.Euler(0, 0, rotation);
-                rotSpeed = moveRotSpeed;
-            } else {
-                rotation = 0;
-                targetRot = Quaternion.identity;
-                rotSpeed = rotSnapbackSpeed;
-            }
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
-        }
-        lastMoveInput = moveInput;
-    }
-
-    private float Sign(float number) {
-        return number < 0 ? -1 : (number > 0 ? 1 : 0);
+            targetRot = Quaternion.identity;
+        } 
+        float rotSpeed = Mathf.Abs(targetRot.eulerAngles.z - transform.rotation.eulerAngles.z) > maxShipRotation || targetRot == Quaternion.identity ? rotSnapbackSpeed : moveRotSpeed;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
     }
 }
