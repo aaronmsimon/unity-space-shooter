@@ -11,6 +11,7 @@
 
 ### Post Processing
 [Unity Learn](https://learn.unity.com/tutorial/post-processing-effects-depth-of-field-2019-3)
+[Depth of Field with multiple cameras](https://forum.unity.com/threads/how-to-blur-specific-layers-only.555520/)
 
 ### Shader Graph
 [Stars](https://youtu.be/yw2J9NWRdow) and read the comments
