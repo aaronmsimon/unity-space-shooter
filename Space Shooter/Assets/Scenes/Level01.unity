@@ -320,6 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 366392920}
+  - component: {fileID: 366392921}
   m_Layer: 0
   m_Name: RightTurret
   m_TagString: Untagged
@@ -343,6 +344,20 @@ Transform:
   m_Father: {fileID: 1793703787}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &366392921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366392919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7ffc812ad691d4e852d8bd594a3bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretSide: 1
+  rotSpeed: 50
 --- !u!1 &434697972
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +406,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   moveRotSpeed: 75
-  turretRotSpeed: 50
 --- !u!114 &434697975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,6 +1228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1889799571}
+  - component: {fileID: 1889799572}
   m_Layer: 0
   m_Name: LeftTurret
   m_TagString: Untagged
@@ -1237,6 +1252,20 @@ Transform:
   m_Father: {fileID: 1793703787}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1889799572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889799570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7ffc812ad691d4e852d8bd594a3bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretSide: 0
+  rotSpeed: 50
 --- !u!1 &1906793666
 GameObject:
   m_ObjectHideFlags: 0
