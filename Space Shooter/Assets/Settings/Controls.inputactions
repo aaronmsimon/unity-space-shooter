@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "LeftTurretReset",
+                    "type": "Button",
+                    "id": "d45f2349-ccb6-4f4c-865d-2ad3e966eba3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "RightTurretRotate",
                     "type": "Button",
                     "id": "1dc18a47-824f-40d0-aece-88d21a7ca44e",
@@ -45,6 +54,15 @@
                     "name": "RightTurretFire",
                     "type": "Button",
                     "id": "a9639722-5603-4549-b7b5-fd3120af87eb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightTurretReset",
+                    "type": "Button",
+                    "id": "374c66c8-f567-4e0b-b529-0af8aad92c39",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -187,7 +205,7 @@
                 {
                     "name": "",
                     "id": "075c344f-faab-4524-8590-35817973c5fd",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -198,11 +216,33 @@
                 {
                     "name": "",
                     "id": "7eaba001-91b9-4db8-8abc-0b4d17e641b0",
-                    "path": "<Keyboard>/p",
+                    "path": "<Keyboard>/semicolon",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "RightTurretFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3de52a75-2fc6-45c2-bb08-f594e56ef0f0",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftTurretReset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fdf37e0c-f852-403c-b6db-6796e4213af1",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightTurretReset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

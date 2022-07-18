@@ -7,37 +7,20 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float moveRotSpeed = 5f;
-    [SerializeField] private float turretRotSpeed = 5f;
 
     private PlayerInput playerInput;
-    private Transform leftTurret;
-    private Transform rightTurret;
 
     private float moveInput;
     private float rotSnapbackSpeed = 200f;
     private float maxShipRotation = -45;
-    private float leftTurretRot;
-    private float rightTurretRot;
 
     private void Awake()
     {
         playerInput = gameObject.GetComponent<PlayerInput>();
-        leftTurret = transform.Find("Graphics/LeftTurret").transform;
-        rightTurret = transform.Find("Graphics/RightTurret").transform;
     }
 
     private void Update()
     {
-        if (leftTurret != null) {
-            leftTurretRot = playerInput.actions["LeftTurretRotate"].ReadValue<float>();
-            leftTurret.Rotate(Vector3.up, leftTurretRot * turretRotSpeed * Time.deltaTime);
-        }
-
-        if (rightTurret != null) {
-            rightTurretRot = playerInput.actions["RightTurretRotate"].ReadValue<float>();
-            rightTurret.Rotate(Vector3.up, rightTurretRot * turretRotSpeed * Time.deltaTime);
-        }
-
         moveInput = playerInput.actions["Move"].ReadValue<float>();
         Move();
     }
