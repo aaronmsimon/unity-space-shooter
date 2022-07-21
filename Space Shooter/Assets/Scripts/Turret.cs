@@ -10,7 +10,12 @@ public class Turret : MonoBehaviour
     [SerializeField] private TurretSide turretSide;
     [SerializeField] private float rotSpeed = 50f;
 
+    [SerializeField] private GameObject projectile;
+
     private PlayerInput playerInput;
+
+    private float nextShotTime;
+    private float timeBetweenShots = .2f;
 
     private void Awake()
     {
@@ -24,5 +29,16 @@ public class Turret : MonoBehaviour
 
         if (playerInput.actions[$"{turretSide}TurretReset"].ReadValue<float>() != 0)
             transform.rotation = Quaternion.identity;
+
+        if (playerInput.actions[$"{turretSide}TurretFire"].ReadValue<float>() != 0)
+            Shoot();
+    }
+
+    private void Shoot()
+    {
+        if (Time.time > nextShotTime) {
+            Instantiate(projectile, new Vector3(transform.position.x, 0, transform.position.z), transform.rotation);
+            nextShotTime = Time.time + timeBetweenShots;
+        }
     }
 }

@@ -358,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretSide: 1
   rotSpeed: 50
+  projectile: {fileID: 7738687883725131834, guid: 82c6b3bf4611c2849990bd0592481448, type: 3}
 --- !u!1 &434697972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretSide: 0
   rotSpeed: 50
+  projectile: {fileID: 7738687883725131834, guid: 82c6b3bf4611c2849990bd0592481448, type: 3}
 --- !u!1 &1906793666
 GameObject:
   m_ObjectHideFlags: 0
