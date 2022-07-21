@@ -16,3 +16,6 @@
 ### Shader Graph
 [Stars](https://youtu.be/yw2J9NWRdow) and read the comments
 [Great starfield tutorial](https://timcoster.com/2020/07/18/unity-shadergraph-starfield-tutorial/)
+
+### Procedural Star Generation
+[YouTube - Coderius](https://youtu.be/8aIv_zQbHSU)
